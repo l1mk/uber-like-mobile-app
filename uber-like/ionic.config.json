@@ -1,5 +1,7 @@
 {
   "name": "uber-like",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
