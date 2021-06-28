@@ -1,0 +1,20 @@
+
+//ion background css
+ion-content{
+    --background: #fff;
+  }
+  //center Logo
+  .main-logo{
+    position: relative;
+    top: 28vh;
+    height: 55vh;
+    width: 30%;
+    margin: auto;
+    margin-bottom: 30%;
+    display: block;
+  }
+  //button border blue
+  .login-button {
+    border: solid 2px #3B546A;
+    --ion-border-color: #3B546A;
+  }

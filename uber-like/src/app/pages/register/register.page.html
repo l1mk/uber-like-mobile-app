@@ -1,0 +1,70 @@
+<ion-header class="ion-no-border" transparent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-buttons>
+        <ion-back-button defaultHref="/" text="" mode="ios" color="secondary"></ion-back-button>
+      </ion-buttons>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid fixed class="ion-padding">
+
+    <ion-row>
+      <ion-col>
+
+          <ion-card class="ion-padding">
+            <ion-card-header>
+              <ion-slides #slides>
+                
+                <ion-slide *ngFor="let avatar of avatars">
+                  <button type="submit" float-left ion-button class="btnPrev" (click)="prev()">&#8249;</button>
+                  <img class="pick-avatar avatar-icon" src="/assets/avatars/{{avatar.img}}" [ngClass]="{ 'pick-avatar-seleccionado': avatar.selected }">
+                  <button type="submit" float-right ion-button class="btnNext" (click)="next()">&#8250;</button>
+                </ion-slide>
+                
+              </ion-slides>
+            </ion-card-header>
+
+            <ion-card-content class="ion-padding">
+              <ion-label color="secondary">Select Avatar</ion-label>
+            </ion-card-content>
+          </ion-card>
+
+        </ion-col>
+      </ion-row>
+
+      <form (ngSubmit)="register()">
+        <ion-row>
+          <ion-col>
+            <ion-list>
+              <ion-item>
+                <ion-label color="secondary" position="floating">Name</ion-label>
+                <ion-input name="email" type="email" required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label color="secondary" position="floating">Email</ion-label>
+                <ion-input name="name" type="text" required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label color="secondary" position="floating">Password</ion-label>
+                <ion-input name="password" type="password" required></ion-input>
+              </ion-item>
+              <ion-item class="bottom-margin">
+                <ion-label color="secondary" position="floating">Confirm Password</ion-label>
+                <ion-input name="password" type="password" required></ion-input>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-button type="submit" color="secondary" expand="full">Create User</ion-button>
+          </ion-col>
+        </ion-row>
+      </form>
+        
+  </ion-grid>
+</ion-content>

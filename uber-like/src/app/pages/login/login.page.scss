@@ -1,0 +1,68 @@
+//ion background css
+ion-content {
+    position: absolute;
+    top: 0px;
+}
+//ion background css
+ion-toolbar {
+    --background: transparent;
+}
+//ion card size
+ion-card {
+    display: flex;
+    position: relative;
+    margin: auto;
+    margin-top: 10vmax;
+    height: 8rem;
+    width: 14rem;
+    overflow: unset !important;
+}
+//ion content css
+ion-card-header {
+    position: absolute;
+    width: 14rem;
+    text-align: center;
+    left: 0;
+    top: -35%
+}
+//ion content css
+ion-card-content {
+    position: absolute;
+    width: 14rem;
+    text-align: center;
+    left: 0;
+    top: 50%;
+}
+//ion item line color
+ion-item {
+    --border-color: #3B546A;
+}
+//password recovery title
+.password-recovery-title {
+    display: flex;
+    font-size: 14px;
+    margin-top: 5%;
+    align-content: flex-end;
+    justify-content: flex-end;
+}
+//bottom margin to push button
+.bottom-margin {
+    margin-bottom: 20%;
+}
+//top margin for form
+.top-margin {
+    margin-top: 10%;
+}
+//avatar img css
+.avatar-icon {
+    width: 6vmax;
+    z-index: 1;
+}
+//hiperlink css
+a {
+    color: lightgrey;
+}
+//animation on click
+.button:active {
+    filter: brightness(50%);
+}
