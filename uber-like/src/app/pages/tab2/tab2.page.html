@@ -1,0 +1,130 @@
+<ion-header class="ion-no-border bar-header" transparent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-buttons>
+        <ion-back-button defaultHref="/main/tabs/tab2" text="" mode="ios" color="secondary"></ion-back-button>
+      </ion-buttons>
+    </ion-buttons>
+  </ion-toolbar>
+ 
+</ion-header>
+ 
+<ion-content>
+
+  <ion-grid fixed class="ion-padding" >
+      
+      <ion-row>
+          <ion-col>
+              <ion-searchbar placeholder=" Where do you want to go? " inputmode="text" type="text" [debounce]="250" animated class="search-bar button" routerLink="/search"></ion-searchbar>
+              
+              <ion-card>
+
+                  <ion-item lines="none" class="card-title">
+                      <ion-label class="big-font" color="secondary"><h1>Saved Locations</h1></ion-label>
+                      <ion-icon color="primary" slot="end" class="default" src="assets/icon/star_avatar.svg"></ion-icon>
+                  </ion-item>
+              
+                  <ion-card-content>
+
+                      <ion-list #list>
+
+                          <ion-item-sliding>
+                              <ion-item detail lines="none">
+                                  <ion-label color="secondary">
+                                      <h3 class="bold">Home</h3>
+                                      <p>9213 West Street #09</p>
+                                  </ion-label>
+                              </ion-item>
+                          
+                              <ion-item-options side="start">
+                              
+                                  <ion-item-option color="tertiary">
+                                      <ion-icon class="button" slot="icon-only" name="heart" color="primary"></ion-icon>
+                                  </ion-item-option>
+                                  <ion-item-option color="tertiary">
+                                      <ion-icon class="button" slot="icon-only" name="share" color="secondary"></ion-icon>
+                                  </ion-item-option>
+                              </ion-item-options>
+                          
+                              <ion-item-options side="end">
+                                  <ion-item-option color="tertiary">
+                                      <ion-icon class="button" slot="icon-only" name="trash" color="danger"></ion-icon>
+                                  </ion-item-option>
+                              </ion-item-options>
+                          </ion-item-sliding>
+                      
+                          <ion-item-sliding>
+                              <ion-item detail lines="none">
+                                  <ion-label color="secondary">
+                                      <h3 class="bold">Work</h3>
+                                      <p>1233 South Street</p>
+                                  </ion-label>
+                              </ion-item>
+                          
+                              <ion-item-options side="start">
+                              
+                                  <ion-item-option color="tertiary">
+                                      <ion-icon class="button" slot="icon-only" name="heart" color="primary"></ion-icon>
+                                  </ion-item-option>
+                                  <ion-item-option color="tertiary">
+                                      <ion-icon class="button" slot="icon-only" name="share" color="secondary"></ion-icon>
+                                  </ion-item-option>
+                              </ion-item-options>
+                          
+                              <ion-item-options side="end">
+                                  <ion-item-option color="tertiary">
+                                      <ion-icon class="button" slot="icon-only" name="trash" color="danger"></ion-icon>
+                                  </ion-item-option>
+                              </ion-item-options>
+                          </ion-item-sliding>
+                      
+                      </ion-list>
+
+                  </ion-card-content>
+
+              </ion-card>
+
+              <ion-card>
+
+                  <ion-item lines="none" class="card-title">
+                      <ion-label class="big-font" color="secondary"><h1>Last Trip</h1></ion-label>
+                      <ion-icon color="primary" slot="end" class="default"  src="assets/icon/bike_avatar.svg"></ion-icon>
+                  </ion-item>
+                  
+                  <ion-img class="button" src="/assets/images/map-313x125.png" routerLink="/viajes"></ion-img>
+                  <ion-card-content>
+                  
+                      <ion-row>
+                          <ion-col size="9">
+                    
+                              <ion-label color="secondary">
+                                  <h3 class="bold">08-02-2021 05-34 p.m.</h3>
+                                  <p>Renault Symbol 0154XXX</p>
+                              </ion-label>
+
+                          </ion-col>
+                          <ion-col size="3">
+                              <ion-label class="bold right-text" >$15,50</ion-label>
+                          </ion-col>
+                          
+                      </ion-row>
+                  
+                  </ion-card-content>
+              </ion-card>
+
+              <ion-card class="ad-card">
+                      <ion-row class="ion-align-items-center">
+                          <ion-col size="8" class="ion-align-self-center">
+                              <img class="button" src="/assets/icon/joinup_logo.svg" (click)="adPage()">
+                          </ion-col>
+                          <ion-col size="4" class="ion-align-self-center">
+                              <ion-icon class="button" src="/assets/icon/joinup_avatar.svg" (click)="adPage()"></ion-icon>
+                          </ion-col>
+                      </ion-row>
+              </ion-card>
+
+          </ion-col>
+      </ion-row>
+
+  </ion-grid>
+</ion-content>

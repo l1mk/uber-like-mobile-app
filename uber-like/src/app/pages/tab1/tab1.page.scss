@@ -1,0 +1,97 @@
+//ion background css
+ion-content {
+    position: absolute;
+    top: 0px;
+}
+//ion background css
+ion-toolbar {
+    --background: transparent;
+}
+// square button
+ion-button {
+    --border-radius: 0;
+}
+//ion card size
+ion-card {
+    margin: auto;
+    margin-bottom: 2vmax;
+    padding-top: 1%;
+    width: 100%;
+    overflow: unset !important;
+}
+//header avatar 
+ion-card-header {
+    position: absolute;
+    width: 90%;
+    text-align: center;
+    top: -70%;
+}
+//header white text
+ion-label h4 {
+    color: #fff;
+}
+.white-text {
+    color: #fff;
+    font-size: 0.7em;
+    margin-bottom: 10%;
+}
+//avatar buttons section
+.avatar-buttons{
+    display: flex;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+.avatar-buttons ion-col {
+    width: 40vmax;
+}
+.avatar-buttons img {
+    width: 5vmax;
+}
+//ion card title
+.title-card{
+    display: flex;
+    width: 90%;
+    height: 8%;
+    margin-top: 2.5rem;
+    padding-top: 0.8rem;
+    justify-content: center;
+}
+//avatar class
+.avatar {
+    position: absolute;
+    right: -12%;
+    top: -2%;
+    z-index: 1;
+    width:8vmax;
+}
+//img position
+img {
+    display: block;
+    margin: auto;
+}
+//center text
+.center-text {
+    font-size: 0.8em;
+    text-align: center;
+};
+//invite friend card
+.invite-friend {
+    --background: #000;
+}
+//button invite
+.button-right {
+    display: block;
+    margin: auto;
+}
+//white text
+.white-text {
+    color: #fff !important;
+}
+//animation on click
+.button:active {
+    filter: brightness(50%);
+}
+
+
+  
+

@@ -1,0 +1,82 @@
+//ion background css
+ion-content {
+    position: absolute;
+    top: 0px;
+}
+//ion background css
+ion-toolbar {
+    --background: transparent;
+}
+// square button
+ion-button {
+    --border-radius: 0;
+    width: 100%;
+}
+//ion card size
+ion-card {
+    margin: auto;
+    margin-bottom: 2vmax;
+    padding-top: 1%;
+    width: 100%;
+    overflow: unset !important;
+}
+//header avatar 
+ion-card-header {
+    position: absolute;
+    width: 90%;
+    text-align: center;
+    top: -85%;
+}
+//ion item backgrounds
+ion-item {
+    --background: none;
+}
+//button size
+ion-button {
+    height: 100%;
+}
+//ion card title (height and margin different from tab1
+.title-card{
+    display: flex;
+    width: 90%;
+    height: 8%;
+    margin-top: 2.5rem;
+    padding-top: 0.8rem;
+    justify-content: center;
+}
+//avatar
+.avatar {
+    position: absolute;
+    right: -12%;
+    top: 20%;
+    z-index: 1;
+    width:8vmax;
+}
+//img position
+img {
+    display: block;
+    margin: auto;
+}
+//button border blue
+.detail-button {
+    border: solid 2px #3B546A;
+    --ion-border-color: #3B546A;
+}
+//bigger titles
+.big-font {
+    font-size: medium;
+}
+//h4 style
+h4 {
+    font-size: medium;
+    font-weight: 600;
+}
+//top margin to push button
+.top-margin {
+    margin-top: 20%;
+}
+//animation on click
+.button:active {
+    filter: brightness(50%);
+}
+

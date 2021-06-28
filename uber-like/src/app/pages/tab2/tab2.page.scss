@@ -1,0 +1,92 @@
+//ion background css
+ion-content {
+    position: absolute;
+    top: 0px;
+}
+//ion background css
+ion-toolbar {
+    --background: transparent;
+}
+//ion card size
+ion-card {
+    position: relative;
+    margin: auto;
+    margin-bottom: 2vmax;
+    padding-top: 1%;
+    width: 100%;
+}
+//ion item line color
+ion-item {
+    --border-color: #4CD38E;
+}
+//svg icons css
+ion-icon {
+    &.default {
+      position: absolute;
+      right: 5%;
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+}
+//bolded titles
+.bold {
+    font-weight: 800;
+}
+//bigger titles
+.big-font {
+    font-size: medium;
+}
+//search bar style
+.search-bar {
+    margin: auto;
+    margin-top: 2vmax;
+    margin-bottom: 2vmax;
+    width: 100%;
+    text-align: center;
+    opacity: 90%;
+    --background: lightgrey;
+    --color: #fff;
+    --placeholder-color: #fff;
+    --placeholder-opacity: 100%;
+    --box-shadow: 10px 8px 8px -10px var( --ion-color-dark-tint)
+}
+//card title
+.card-title {
+    height: 70px;
+    overflow: unset !important;
+}
+//center text
+.center-text {
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+}
+//right text
+.right-text {
+    position: absolute;
+    right: 1rem;
+}
+// ad card
+.ad-card {
+    display: flex;
+    justify-content: center;
+    height: 22vmax;
+}
+// logo inside card
+.ad-card img {
+    width: 40vmax;
+    display: block;
+    margin: auto;
+}
+// avatar inside card
+.ad-card ion-icon {
+    height: 8vmax;
+    width: 10vmax;
+    display: block;
+    margin: auto;
+}
+//animation on click
+.button:active {
+    filter: brightness(50%);
+}
+

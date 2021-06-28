@@ -1,0 +1,21 @@
+//icon sizes
+ion-icon {
+    &.default {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+}
+//no borders
+ion-tab-bar {
+    --border: none;
+}
+//top blue line on tab selected
+.tab-selected {
+background-image: url(../../../assets/icon/top_icon.svg);
+background-repeat: no-repeat;
+background-position-x: center;
+}
+//animation on click
+.button:active {
+  filter: brightness(50%);
+}
