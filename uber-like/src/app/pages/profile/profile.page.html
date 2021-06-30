@@ -1,0 +1,81 @@
+<ion-header class="ion-no-border bar-header" transparent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-buttons>
+        <ion-back-button defaultHref="/main/tabs/tab2" text="" mode="ios" color="secondary"></ion-back-button>
+      </ion-buttons>
+    </ion-buttons>
+  </ion-toolbar>
+ 
+</ion-header>
+ 
+<ion-content>
+
+  <ion-grid fixed class="ion-padding" >
+      
+      <ion-row>
+          <ion-col>
+
+              <ion-card class="ion-padding title-card"> 
+                  
+                  <ion-card-header>
+                    <ion-slides>
+                      <ion-slide *ngFor="let avatar of avatars">
+                        <button type="submit" float-left ion-button class="btnPrev" (click)="prev()">&#8249;</button> 
+                        <img class="avatar-icon" src="/assets/avatars/{{avatar.img}}" [ngClass]="{ 'pick-avatar-seleccionado': avatar.seleccionado }">
+                        <button type="submit" float-right ion-button class="btnNext" (click)="next()">&#8250;</button>
+                      </ion-slide>
+                    </ion-slides>
+                  </ion-card-header>
+                  <ion-card-content>
+                      <ion-label color="secondary">My Profile</ion-label>
+                  </ion-card-content>
+
+              </ion-card>
+          </ion-col>
+      </ion-row>
+
+      
+      <form (ngSubmit)="save()" class="top-margin ion-padding">
+        <h4 class="center-text">Update Personal Information:</h4>
+        <ion-row>
+          <ion-col>
+            <ion-list>
+              <ion-item> 
+                <ion-label color="secondary">Name:</ion-label>
+                <ion-input name="name" placeholder="{{user.name}}" type="text"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label color="secondary">Email:</ion-label>
+                <ion-input name="email" placeholder="{{user.email}}" type="email"></ion-input>
+              </ion-item>
+              <ion-item> 
+                <ion-label color="secondary">Phone:</ion-label>
+                <ion-input name="phone" placeholder="{{user.phone}}" type="number"></ion-input>
+              </ion-item>
+              <ion-item class="bottom-margin">
+                <ion-label color="secondary">DBA:</ion-label>
+                <ion-input name="birthdate" placeholder="{{user.birthdate}}" type="text"></ion-input>
+              </ion-item>
+              <ion-item lines="none">
+                <ion-segment (ionChange)="segmentChanged($event)" value="{{user.genre}}">
+                  <ion-segment-button value="male">
+                    <ion-label>Male</ion-label>
+                  </ion-segment-button>
+                  <ion-segment-button value="female">
+                    <ion-label>Female</ion-label>
+                  </ion-segment-button>
+                </ion-segment>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-button type="submit" color="primary" expand="full">Save</ion-button>
+          </ion-col>
+        </ion-row>
+      </form>
+
+  </ion-grid>
+</ion-content>
