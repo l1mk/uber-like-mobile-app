@@ -19,9 +19,8 @@ ion-card {
     margin-top: 10vmax;
     height: 8rem;
     width: 14rem;
-    border-radius: 5%;
     overflow: unset !important;
-  }
+}
   //ion content css
   ion-card-header {
     position: absolute;
@@ -29,7 +28,7 @@ ion-card {
     text-align: center;
     left: 0;
     top: -35%
-  }
+}
   //ion content css
   ion-card-content {
     position: absolute;
@@ -37,22 +36,22 @@ ion-card {
     text-align: center;
     left: 0;
     top: 50%;
-  }
+}
 //ion input field
 ion-input {
     font-size: 0.8em;
 }
 ion-item {
     --border-color: #3B546A;
-  }
-  ion-segment {
-    --background: #3B546A;
-  }
+}
+ion-segment {
+    --background: #8599ac;
+}
 //avatar img css
 .avatar-icon {
     width: 10vmax;
     z-index: 1;
-  }
+}
 //bottom margin to push button
 .bottom-margin {
     margin-bottom: 5%;

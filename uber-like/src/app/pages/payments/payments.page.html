@@ -1,9 +1,72 @@
-<ion-header>
+<ion-header class="ion-no-border bar-header" transparent>
   <ion-toolbar>
-    <ion-title>payments</ion-title>
+    <ion-buttons slot="start">
+      <ion-buttons>
+        <ion-back-button defaultHref="/main/tabs/tab2" text="" mode="ios"></ion-back-button>
+      </ion-buttons>
+    </ion-buttons>
   </ion-toolbar>
+ 
 </ion-header>
-
+ 
 <ion-content>
 
+  <ion-grid fixed class="ion-padding">
+
+    <ion-row>
+        <ion-col>
+
+            <ion-card class="ion-padding title-card"> 
+                
+              <ion-card-header>
+                    <img class="avatar-icon" src="/assets/avatars/payment_active_avatar.svg">
+              </ion-card-header>
+              <ion-card-content>
+                  <ion-label color="secondary">Your Payment Methods</ion-label>
+              </ion-card-content>
+
+            </ion-card>
+
+            <h3>Availables</h3>
+            <ion-item lines="none" class="item-card {{payment.selected  ? 'selected' : ''}} button" *ngFor="let payment of payments" (click)="select()">
+              <ion-row class="row-width">
+
+                <ion-col size="2" class="center">
+                  <ion-avatar>
+                    <img src="/assets/avatars/{{payment.img}}">
+                  </ion-avatar>
+                </ion-col>
+                <ion-col size="7">
+                  <ion-label color="secondary">
+                    <h4 class="bold">{{payment.number}}</h4>
+                    <p>{{payment.name}}</p>
+                  </ion-label>
+                </ion-col>
+                <ion-col size="3" class="ion-align-self-center">
+                  <ion-label color="secondary" class="small-text">{{payment.type}}</ion-label>
+                </ion-col>
+
+              </ion-row>
+            </ion-item>
+              
+            <h3>Add Payment Methods</h3>
+            <ion-item detail lines="none" class="item-card bottom-card">
+              <ion-avatar>
+                <img src="/assets/avatars/visa_avatar.svg">
+              </ion-avatar>
+              <ion-avatar>
+                <img src="/assets/avatars/mastercard_avatar.svg">
+              </ion-avatar>
+              <ion-avatar>
+                <img src="/assets/avatars/amex_avatar.svg">
+              </ion-avatar>
+              <ion-avatar>
+                <img src="/assets/avatars/paypal_avatar.svg">
+              </ion-avatar>
+            </ion-item>
+  
+        </ion-col>
+      </ion-row>
+  </ion-grid>
 </ion-content>
+

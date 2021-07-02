@@ -1,0 +1,129 @@
+//ion background css
+ion-content {
+    position: absolute;
+    top: 0px;
+}
+//ion background css
+ion-toolbar {
+    --background: transparent;
+}
+// square button
+ion-button {
+    --border-radius: 0;
+    width: 100%;
+}
+//io-avatar 
+ion-avatar {
+    margin: auto;
+    width: 5vmax;
+    height: 5vmax;
+}
+//avatar size
+ion-avatar img {
+    width: 8vmax;
+    display: block;
+    margin: auto;
+}
+ion-list ion-avatar img {
+    box-shadow: 1px 1px 3px 1px lightgrey;
+}
+//ion item backgrounds
+ion-item {
+    --background: none;
+}
+//ion card size
+ion-card {
+    display: flex;
+    position: relative;
+    margin: auto;
+    margin-top: 10vmax;
+    height: 8rem;
+    width: 14rem;
+    overflow: unset !important;
+}
+//ion content css
+ion-card-header {
+    position: absolute;
+    width: 14rem;
+    text-align: center;
+    left: 0;
+    top: -35%
+}
+//ion content css
+ion-card-content {
+    position: absolute;
+    width: 14rem;
+    text-align: center;
+    left: 0;
+    top: 50%;
+}
+//avatar img css
+.avatar-icon {
+    width: 10vmax;
+    z-index: 1;
+}
+//img position
+img {
+    display: block;
+    margin: auto;
+}
+.item-card {
+    width: 100%;
+    height: 8vmax;
+    margin: auto;
+    margin-bottom: 4%;
+    padding-top: 3%;
+    padding-bottom: 18%;
+    overflow: unset !important;
+    box-shadow: 2px 2px 5px 1px lightgrey;
+}
+.selected {
+    background-color: #4CD38E;
+}
+
+//font decoration
+h3 {
+    margin-left: 5%;
+    font-size: medium;
+}
+h4{
+    color: #3B546A;
+}
+p {
+    color: #3B546A;
+}
+//small text
+.small-text {
+    font-size: 0.9rem;
+}
+//small text
+.smaller-text {
+    font-size: 0.6rem;
+}
+//row width
+.row-width {
+    width: 100%;
+}
+//bolded titles
+.bold {
+    font-weight: 600;
+}
+//center text
+.center-text {
+    font-size: 0.8em;
+    text-align: center;
+    justify-content: center;
+}
+//center 
+.center {
+    position: relative;
+    left: -10px;
+}
+//animation on click
+.button:active {
+    filter: brightness(50%);
+}
+//add card card
+.bottom-card {
+    background-color: #8599ac;
+}

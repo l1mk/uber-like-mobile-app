@@ -12,6 +12,10 @@ ion-button {
     --border-radius: 0;
     width: 100%;
 }
+//ion item backgrounds
+ion-item {
+    --background: none;
+}
 //ion card size
 ion-card {
     margin: auto;
@@ -27,15 +31,7 @@ ion-card-header {
     text-align: center;
     top: -85%;
 }
-//ion item backgrounds
-ion-item {
-    --background: none;
-}
-//button size
-ion-button {
-    height: 100%;
-}
-//ion card title (height and margin different from tab1
+//ion card title
 .title-card{
     display: flex;
     width: 90%;
