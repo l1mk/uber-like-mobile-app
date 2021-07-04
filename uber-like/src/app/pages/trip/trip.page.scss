@@ -1,0 +1,87 @@
+//ion background css
+ion-content {
+    position: absolute;
+    top: 0px;
+    --background: url(../../../assets/images/map_bg.png) no-repeat center center /cover;
+}
+//ion background css
+ion-toolbar {
+    --background: transparent;
+}
+
+//ion card size
+ion-card {
+    position: relative;
+    margin: auto;
+    margin-bottom: 5%;
+}
+//ion icon 
+ion-icon {
+    margin-right: 1vmax;
+}
+//ion-item
+ion-item {
+    --background: none;
+}
+ion-img {
+    display: flex;
+    margin: 0 auto;
+    width: 30%;
+    margin-bottom: 5%;
+}
+.flex {
+    display: flex;
+}
+//star icon alignments
+.star-icon {
+    text-align: right;
+    font-size: 1em;
+}
+//rating header
+.rating-card {
+    background-color: #3B546A;
+}
+//col size
+.col {
+    height: 80vmax;
+    display: flex;
+}
+.price {
+    text-align: right;
+    font-weight: 700;
+}
+//small text
+.small-text {
+    font-size: 0.9rem;
+}
+//small text
+.smaller-text {
+    font-size: 0.6rem;
+}
+//title decoration
+h3 {
+    color: #3B546A;
+}
+h3 {
+    color: #3B546A;
+}
+//paragraph decoration
+p {
+    color: #3B546A;
+}
+//bolded
+.bold {
+    font-weight: 700;
+}
+//text align 
+.align-right {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: right;
+}
+//white background
+.white-bg{
+    background: #fff;
+}
+
+

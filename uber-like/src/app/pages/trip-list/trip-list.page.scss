@@ -1,0 +1,87 @@
+//ion background css
+ion-content {
+    position: absolute;
+    top: 0px;
+}
+//ion background css
+ion-toolbar {
+    --background: transparent;
+}
+// square button
+ion-button {
+    --border-radius: 0;
+    width: 100%;
+}
+//ion card size
+ion-card {
+    margin: auto;
+    margin-bottom: 2vmax;
+    padding-top: 1%;
+    width: 100%;
+    overflow: unset !important;
+}
+//header avatar 
+ion-card-header {
+    position: absolute;
+    width: 90%;
+    text-align: center;
+    top: -70%;
+}
+//ion item backgrounds
+ion-item {
+    --background: none;
+}
+//star size
+ion-icon {
+    font-size: 8px;
+}
+//avatar size
+ion-img {
+    padding: 2%;
+}
+//star icon alignments
+.icon-alignment {
+    display: flex;
+    justify-content: flex-end;
+}
+//ion card title (height and margin different from tab1
+.title-card{
+    display: flex;
+    width: 90%;
+    height: 5%;
+    margin-top: 2.5rem;
+    padding-top: 0.8rem;
+    justify-content: center;
+}
+//avatar class
+.avatar {
+    position: absolute;
+    right: -12%;
+    top: 40%;
+    z-index: 1;
+    width:8vmax;
+}
+//center text
+.center-text {
+    justify-content: center;
+}
+//small text
+.small-text {
+    font-size: 0.9rem;
+}
+//small text
+.smaller-text {
+    font-size: 0.6rem;
+}
+//bolded titles
+.bold {
+    font-weight: 600;
+}
+//align right
+.align-right {
+    text-align: right;
+}
+//animation on click
+.button:active {
+    filter: brightness(50%);
+}
