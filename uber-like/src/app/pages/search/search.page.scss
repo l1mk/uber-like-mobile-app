@@ -1,0 +1,48 @@
+
+//ion background css
+ion-toolbar {
+    --background: #4CD38E;
+}
+//header with search bars
+.header-search-bars {
+    width: 100%;
+    display: block;
+    margin: auto;
+    background-color: #4CD38E;
+}
+//search bar 1 style
+.search-bar-1 {
+    margin: auto;
+    width: 100%;
+    opacity: 60%;
+    --background: #fff;
+    --color: #3B546A;
+    --placeholder-color: #3B546A;
+    --placeholder-opacity: 100%;
+    --box-shadow: 10px 8px 8px -10px var( --ion-color-dark-tint)
+}
+//search bar 2 style
+.search-bar-2 {
+    margin: auto;
+    width: 100%;
+    --background: #fff;
+    --color: #3B546A;
+    --placeholder-color: #3B546A;
+    --placeholder-opacity: 100%;
+    --box-shadow: 10px 8px 8px -10px var( --ion-color-dark-tint);
+    margin-top: -8%;
+}
+//items separation
+.line-separation {
+    background-color: #3B546A;
+    height: 1%;
+    width: 100%;
+}
+//bolded titles
+.bold {
+    font-weight: 600;
+}
+//animation on click
+.button:active {
+    filter: brightness(50%);
+}

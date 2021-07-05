@@ -9,6 +9,19 @@ export class Tab2Page implements OnInit {
 
   constructor() { }
 
+  home = 
+  {
+    address: "200 s Street",
+    city: "Houston TX 77450"
+  }
+
+
+workPlace = 
+  {
+    address: "12300 Theall Road",
+    city: "Houston TX 77455"
+  }
+
   ngOnInit() {
   }
 

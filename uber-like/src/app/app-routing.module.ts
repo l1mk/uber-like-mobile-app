@@ -42,6 +42,10 @@ const routes: Routes = [
   {
     path: 'trip',
     loadChildren: () => import('./pages/trip/trip.module').then( m => m.TripPageModule)
+  },
+  {
+    path: 'search',
+    loadChildren: () => import('./pages/search/search.module').then( m => m.SearchPageModule)
   }
 ];
 
