@@ -1,0 +1,65 @@
+//ion background css
+ion-content {
+    position: absolute;
+    top: 0px;
+    --background: url(../../../assets/images/map_bg.png) no-repeat center center /cover;
+}
+//ion background css
+ion-toolbar {
+    --background: transparent;
+}
+//ion card size
+ion-card {
+    position: relative;
+    margin: auto;
+    margin-bottom: 2vmax;
+    width: 100%;
+    border-radius: 5%;
+}
+//ion button widht 
+ion-button {
+    width: 100%;
+}
+//avatar img css
+.avatar-icon {
+    width: 40vmax;
+    z-index: 1;
+    display: block;
+    margin: auto;
+    margin-bottom: 2%;
+}
+//col size
+.col {
+    height: 100vmax;
+    display: flex;
+}
+//center text
+.center-text {
+    justify-content: center;
+}
+//small text
+.small-text {
+    font-size: 0.9rem;
+}
+//small text
+.smaller-text {
+    font-size: 0.6rem;
+}
+//title decoration
+h4{
+    color: #3B546A;
+}
+//paragraph decoration
+p {
+    color: #3B546A;
+}
+//prev decoration
+.btnPrev {
+    background-color: #fff;
+    color: #3B546A;
+}
+//next decoration
+.btnNext {
+    background-color: #fff;
+    color: #3B546A;
+}

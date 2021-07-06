@@ -1,0 +1,56 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-buttons>
+        <ion-back-button defaultHref="/main/tabs/tab2" text="" mode="ios" color="secondary"></ion-back-button>
+      </ion-buttons>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" class="col">
+        <ion-card class="vehicle-card ion-padding">
+
+          <ion-grid>
+            
+            <ion-row class="center-text">
+              <ion-label color="secondary">Choose a Vehicle</ion-label>
+            </ion-row>
+ 
+           
+              <ion-slides #slides>
+                <ion-slide ion-slide *ngFor="let vehicle of vehicles">
+                  <button type="submit" float-left ion-button  color="primary" class="btnPrev" (click)="prev()">&#8249;</button>
+                  <ion-grid>
+                    <ion-row><img class="pick-avatar avatar-icon" src="/assets/avatars/{{vehicle.img}}" [ngClass]="{ 'pick-avatar-seleccionado': vehicle.selected }"></ion-row>
+
+                    <ion-row class="center-text"><ion-label class="smaller-text">{{vehicle.name}}</ion-label></ion-row>
+
+                    <ion-row><h4>{{vehicle.price}}</h4></ion-row>
+
+                    <ion-row><ion-label class="small-text">{{vehicle.estimate}}</ion-label></ion-row>
+                  </ion-grid>
+                  
+                  <button type="submit" float-right ion-button color="primary" class="btnNext" (click)="next()">&#8250;</button>
+                </ion-slide>
+              </ion-slides>
+
+        
+
+            <ion-row class="button-placement">
+              <ion-button color="primary" expand="full">Confirm Selection</ion-button>
+            </ion-row>
+
+          </ion-grid>
+        </ion-card>
+
+      </ion-col>
+
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>
