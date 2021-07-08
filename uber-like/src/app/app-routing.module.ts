@@ -50,6 +50,10 @@ const routes: Routes = [
   {
     path: 'routes-vehicles',
     loadChildren: () => import('./pages/routes-vehicles/routes-vehicles.module').then( m => m.RoutesVehiclesPageModule)
+  },
+  {
+    path: 'saved',
+    loadChildren: () => import('./pages/saved/saved.module').then( m => m.SavedPageModule)
   }
 ];
 

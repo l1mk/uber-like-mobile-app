@@ -1,0 +1,118 @@
+//ion background css
+ion-content {
+    position: absolute;
+    top: 0px;
+    --background: url(../../../assets/images/secondary_bg.png) no-repeat center center /cover;
+}
+//ion background css
+ion-toolbar {
+    --background: transparent;
+}
+//back button customization
+ion-back-button {
+    --min-width: 5vmax;
+    --min-height: 5vmax;
+    --background: #fff;
+    --border-radius: 50%;
+    --color: #3B546A;
+    --margin-start: 8%;
+    --margin-top: 8%;
+}
+//ion item
+ion-item {
+    --background: none;
+}
+//ion card size
+ion-card {
+    display: flex;
+    position: relative;
+    margin: auto;
+    margin-top: 10vmax;
+    height: 8rem;
+    width: 14rem;
+    border-radius: 5%;
+    overflow: unset !important;
+}
+//ion content css
+ion-card-header {
+    position: absolute;
+    width: 14rem;
+    text-align: center;
+    left: 0;
+    top: -35%
+}
+//ion content css
+ion-card-content {
+    position: absolute;
+    width: 14rem;
+    text-align: center;
+    left: 0;
+    top: 50%;
+}
+//ion item line color
+ion-item {
+    --border-color: #3B546A;
+    font-size: small;
+}
+//title paragrahp
+ion-label p {
+    text-align: center;
+    color: #3B546A;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+//bottom line
+.item-options-end {
+    border-bottom-width: 0px !important;
+    border-bottom-style: hidden !important;
+}
+// h3
+h4 {
+    color: #3B546A;
+}
+//avatar img css
+.avatar-icon {
+    width: 10vmax;
+    z-index: 1;
+}
+//text aligns
+.center-text {
+    text-align: center;
+}
+.right-text {
+    text-align: right;
+}
+.left-text {
+    text-align: left;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+//bottom margin to push button
+.bottom-margin {
+    margin-bottom: 5%;
+}
+//top margin to push button
+.top-margin {
+    margin-top: 10%;
+}
+//line artwork
+.line {
+    position: relative;
+    color: lightgrey;
+    top: -5px;
+}
+//animation on click
+.button:active {
+    filter: brightness(50%);
+}
+//bolded titles
+.bold {
+    font-weight: 800;
+}
+//form
+.form {
+    margin-top: -10%;
+}
