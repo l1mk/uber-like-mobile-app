@@ -8,6 +8,19 @@ import { NgForm } from '@angular/forms';
 })
 export class SavedPage implements OnInit {
 
+  favorites = [
+    { 
+      name: "Home",
+      address: "115 #09-26 heights blvd",
+      img: "home_avatar.svg"
+    },
+    {
+      name: "Trabajo",
+      address: "2325 theall road",
+      img: "work_avatar.svg"
+    }
+  ]
+
   constructor() { }
 
   ngOnInit() {

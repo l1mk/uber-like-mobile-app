@@ -32,16 +32,16 @@
 
     <ion-row>
       <ion-col size="12">
-        <ion-list #list class="top-margin">
+        <ion-list #list class="top-margin" *ngFor="let favorite of favorites">
           <ion-item-sliding>
 
               <ion-item detail lines="none">
                 <ion-avatar slot="start">
-                  <img src="/assets/icon/work_avatar.svg">
+                  <img src="/assets/icon/{{favorite.img}}">
                 </ion-avatar>
                 <ion-label color="secondary" class="left-text">
-                    <h3 class="bold">Home</h3>
-                    <span>200 s Street, Houston TX 77450</span>
+                    <h3 class="bold">{{favorite.name}}</h3>
+                    <span>{{favorite.address}}</span>
                 </ion-label>
               </ion-item>
           
@@ -61,36 +61,6 @@
               </ion-item-options>
   
           </ion-item-sliding>
-      
-          <ion-item-sliding>
-
-              <ion-item detail lines="none">
-                <ion-avatar slot="start">
-                  <img src="/assets/icon/home_avatar.svg">
-                </ion-avatar>
-                <ion-label color="secondary" class="left-text">
-                    <h3 class="bold">Work</h3>
-                    <span>12300 Theall Road, Houston TX 77455</span>
-                </ion-label>
-              </ion-item>
-          
-              <ion-item-options side="start">
-                  <ion-item-option color="tertiary">
-                      <ion-icon class="button" slot="icon-only" name="share" color="secondary"></ion-icon>
-                  </ion-item-option>
-              </ion-item-options>
-          
-              <ion-item-options side="end">
-                  <ion-item-option color="tertiary">
-                      <ion-icon class="button" slot="icon-only" name="trash" color="danger"></ion-icon>
-                  </ion-item-option>
-                  <ion-item-option color="tertiary">
-                    <ion-icon class="button" slot="icon-only" name="create-outline" color="secondary"></ion-icon>
-                </ion-item-option>
-              </ion-item-options>
-
-          </ion-item-sliding>
-      
         </ion-list>
       </ion-col>
 
@@ -122,6 +92,14 @@
                 <ion-item >
                   <ion-label color="secondary" position="floating">Address</ion-label>
                   <ion-input name="address" type="text"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label>Category</ion-label>
+                  <ion-select interface="popover" placeholder="Select one">
+                    <ion-select-option value="home">Home</ion-select-option>
+                    <ion-select-option value="work">Work</ion-select-option>
+                    <ion-select-option value="misc">Misc</ion-select-option>
+                  </ion-select>
                 </ion-item>
                 <ion-row>
                   <ion-col class="ion-padding">
