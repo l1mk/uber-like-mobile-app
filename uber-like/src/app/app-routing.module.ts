@@ -58,6 +58,26 @@ const routes: Routes = [
   {
     path: 'account',
     loadChildren: () => import('./pages/account/account.module').then( m => m.AccountPageModule)
+  },
+  {
+    path: 'help-payment',
+    loadChildren: () => import('./pages/help/help-payment/help-payment.module').then( m => m.HelpPaymentPageModule)
+  },
+  {
+    path: 'help-account',
+    loadChildren: () => import('./pages/help/help-account/help-account.module').then( m => m.HelpAccountPageModule)
+  },
+  {
+    path: 'help-more',
+    loadChildren: () => import('./pages/help/help-more/help-more.module').then( m => m.HelpMorePageModule)
+  },
+  {
+    path: 'latest-trip',
+    loadChildren: () => import('./pages/help/latest-trip/latest-trip.module').then( m => m.LatestTripPageModule)
+  },
+  {
+    path: 'contact-form',
+    loadChildren: () => import('./pages/help/contact-form/contact-form.module').then( m => m.ContactFormPageModule)
   }
 ];
 

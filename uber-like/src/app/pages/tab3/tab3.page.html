@@ -34,8 +34,8 @@
                       <ion-label class="big-font" color="secondary">{{lastTrip.address}}</ion-label>
                   </ion-item>
                   <ion-row>
-                      <ion-col size="6"><ion-button color="tertiary" class="detail-button">Detail</ion-button></ion-col>
-                      <ion-col size="6"><ion-button color="primary">Help</ion-button></ion-col>
+                      <ion-col size="6"><ion-button color="tertiary" class="detail-button" (click)="presentAlert()">Detail</ion-button></ion-col>
+                      <ion-col size="6"><ion-button color="primary">Contact Us</ion-button></ion-col>
                   </ion-row>
                   
                  
@@ -46,20 +46,17 @@
 
                   <ion-card-content>
                       <ion-list>
-                          <ion-item detail lines="none">
+                          <ion-item detail lines="none" routerLink="/latest-trip">
                               <ion-label color="secondary">Latest Trips</ion-label>
                           </ion-item>
                           <ion-item detail lines="none">
-                              <ion-label color="secondary">My Payments</ion-label>
+                              <ion-label color="secondary" routerLink="/help-payment">My Payments</ion-label>
                           </ion-item>
                           <ion-item detail lines="none"> 
-                              <ion-label color="secondary">My Account</ion-label>
-                          </ion-item>
-                          <ion-item detail lines="none">
-                              <ion-label color="secondary">My Returns</ion-label>
+                              <ion-label color="secondary" routerLink="/help-account">My Account</ion-label>
                           </ion-item>
                           <ion-item detail lines="none"> 
-                              <ion-label color="secondary">Subscriptions and Benefits</ion-label>
+                              <ion-label color="secondary" routerLink="/help-more">More</ion-label>
                           </ion-item>
                       </ion-list>
                   </ion-card-content>
