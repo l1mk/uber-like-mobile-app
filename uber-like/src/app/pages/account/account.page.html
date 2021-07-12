@@ -1,0 +1,105 @@
+<ion-header class="ion-no-border" transparent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-buttons>
+        <ion-back-button defaultHref="/" text="" mode="ios"></ion-back-button>
+      </ion-buttons>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid fixed class="ion-padding" >
+
+    <ion-row>
+        <ion-col>
+            <ion-card id="header-card" class="ion-padding">
+                <ion-card-header>
+                    <ion-slides>
+                        <ion-slide>
+                            <img class="avatar-icon" src="/assets/avatars/profile_avatar.svg">
+                        </ion-slide>
+                    </ion-slides>
+                </ion-card-header>
+                
+                <ion-card-content class="ion-padding">
+                    <ion-label color="secondary">My Account</ion-label>
+                </ion-card-content>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+
+    <ion-card class="top-margin">
+      <ion-row class="ion-padding data">
+        <ion-col>
+          <h4>Your Info</h4>
+          <ion-icon class="card-icon" color="primary" name="create-outline" routerLink="/profile"></ion-icon>
+          <ion-row>
+            <ion-label><strong>Name:</strong> {{user.name}}</ion-label>
+          </ion-row>
+          <ion-row>
+            <ion-label><strong>Email:</strong> {{user.email}}</ion-label>
+          </ion-row>
+          <ion-row>
+            <ion-label><strong>Phone:</strong> {{user.phone}}</ion-label>
+          </ion-row>
+          <ion-row>
+            <ion-label><strong>Birthdate:</strong> {{user.birthdate}}</ion-label>
+          </ion-row>
+          <ion-row>
+            <ion-label><strong>Genre:</strong> {{user.genre}}</ion-label>
+          </ion-row>
+        </ion-col>
+    </ion-row>
+    </ion-card>
+
+    <ion-card class="top-margin">
+      <ion-row class="ion-padding data">
+        <ion-col>
+          <h4>List of Favorite</h4>
+          <ion-icon class="card-icon" color="primary" name="create-outline" routerLink="/saved"></ion-icon>
+          <ion-row *ngFor="let favorite of favorites">
+            <ion-label><strong>{{favorite.name}}: </strong></ion-label>
+            <ion-label>{{favorite.address}}</ion-label>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+
+    <ion-card class="top-margin">
+      <ion-row class="ion-padding data">
+        <ion-col>
+          <h4>Last Trip</h4>
+          <ion-icon class="card-icon" color="primary" name="list-outline" routerLink="/trip-list"></ion-icon>
+          <ion-row>
+            <ion-label><strong>Date:</strong> {{lastTrip.date}}</ion-label>
+          </ion-row>
+          <ion-row>
+            <ion-label><strong>Vehicle:</strong> {{lastTrip.vehicle}}</ion-label>
+          </ion-row>
+          <ion-row>
+            <ion-label><strong>Price:</strong> {{lastTrip.price}}</ion-label>
+          </ion-row>
+          <ion-row>
+            <ion-label><strong>Address:</strong> {{lastTrip.address}}</ion-label>
+          </ion-row>
+        </ion-col>
+    </ion-row>
+    </ion-card>
+
+    <ion-row class="top-margin">
+      <ion-col>
+        <ion-button expand="full" color="secondary" (click)="presentAlertPrompt()">Password Change</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" color="danger" (click)="presentAlertConfirm()">Erase Account</ion-button>
+      </ion-col>
+    </ion-row>
+
+
+  </ion-grid>
+</ion-content>

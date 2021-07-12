@@ -9,18 +9,26 @@ export class Tab2Page implements OnInit {
 
   constructor() { }
 
-  home = 
-  {
-    address: "200 s Street",
-    city: "Houston TX 77450"
+  lastTrip = {
+    date: "08-02-2021 05-34 p.m.",
+    vehicle: "Renault Symbol 0154XXX",
+    price: "15,50",
+    img: "map-313x125.png",
+    address: "23423 South Street"
   }
 
-
-workPlace = 
-  {
-    address: "12300 Theall Road",
-    city: "Houston TX 77455"
-  }
+  favorites = [
+    { 
+      name: "Home",
+      address: "200 s Street Houston TX 77450",
+      img: "home_avatar.svg"
+    },
+    {
+      name: "Work",
+      address: "12300 Theall Road Houston TX 77455",
+      img: "work_avatar.svg"
+    }
+  ]
 
   ngOnInit() {
   }

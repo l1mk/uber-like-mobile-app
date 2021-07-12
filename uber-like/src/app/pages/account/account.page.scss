@@ -17,18 +17,26 @@ ion-back-button {
     --margin-start: 8%;
     --margin-top: 8%;
 }
+// square button
+ion-button {
+    --border-radius: 0;
+}
 //ion item
 ion-item {
     --background: none;
 }
-//ion card size
-ion-card {
+#header-card {
     display: flex;
     position: relative;
-    margin: auto;
     margin-top: 10vmax;
     height: 8rem;
     width: 14rem;
+}
+
+//ion card size
+ion-card {
+    display: flex;
+    margin: auto;
     border-radius: 5%;
     overflow: unset !important;
 }
@@ -47,6 +55,9 @@ ion-card-content {
     text-align: center;
     left: 0;
     top: 50%;
+}
+ion-row {
+    width: 100%;
 }
 //ion item line color
 ion-item {
@@ -115,8 +126,17 @@ h4 {
 .form {
     margin-top: -10%;
 }
-//ion select label
-#ion-sel-0-lbl {
-    margin-top: 10%;
-    color: #3B546A !important;
+//data label
+.data ion-label {
+    color: #3B546A;
+    font-size: small;
+    padding: 1mm;
+}
+//card icon
+.card-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: x-large;
+    
 }

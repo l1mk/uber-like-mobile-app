@@ -10,18 +10,18 @@ export class SearchPage implements OnInit {
 
   constructor(private navCtrl: NavController) { }
 
-  home = 
+  favorites = [
+    { 
+      name: "Home",
+      address: "200 s Street Houston TX 77450",
+      img: "home_avatar.svg"
+    },
     {
-      address: "200 s Street",
-      city: "Houston TX 77450"
+      name: "Work",
+      address: "12300 Theall Road Houston TX 77455",
+      img: "work_avatar.svg"
     }
-  
-
-  workPlace = 
-    {
-      address: "12300 Theall Road",
-      city: "Houston TX 77455"
-    }
+  ]
   
 
   items = [

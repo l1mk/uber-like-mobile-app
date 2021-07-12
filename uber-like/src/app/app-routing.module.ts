@@ -54,6 +54,10 @@ const routes: Routes = [
   {
     path: 'saved',
     loadChildren: () => import('./pages/saved/saved.module').then( m => m.SavedPageModule)
+  },
+  {
+    path: 'account',
+    loadChildren: () => import('./pages/account/account.module').then( m => m.AccountPageModule)
   }
 ];
 
