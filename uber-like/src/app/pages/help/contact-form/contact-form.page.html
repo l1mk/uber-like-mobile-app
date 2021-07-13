@@ -1,9 +1,68 @@
-<ion-header>
+<ion-header class="ion-no-border" transparent>
   <ion-toolbar>
-    <ion-title>contact-form</ion-title>
+    <ion-buttons slot="start">
+      <ion-buttons>
+        <ion-back-button defaultHref="/" text="" mode="ios" color="secondary"></ion-back-button>
+      </ion-buttons>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
+  <ion-grid fixed class="ion-padding" >
+
+      <ion-row>
+          <ion-col>
+
+              <ion-card class="ion-padding">
+                  <ion-card-header>
+                      <ion-slides>
+                          <ion-slide>
+                              <img class="avatar-icon" src="/assets/avatars/contact_avatar.svg">
+                          </ion-slide>
+                      </ion-slides>
+                  </ion-card-header>
+                  
+                  <ion-card-content class="ion-padding">
+                      <ion-label color="secondary">Contact Us</ion-label>
+                  </ion-card-content>
+              </ion-card>
+
+          </ion-col>
+      </ion-row>
+
+      <form (ngSubmit)="submit(fLogin)" #fLogin="ngForm" class="top-margin bottom-margin">
+          <ion-row>
+              <ion-col>
+                  <ion-list>
+                    <ion-item >
+                      <ion-label color="secondary" position="floating">Name</ion-label>
+                      <ion-input name="name" type="text"></ion-input>
+                  </ion-item>
+                      <ion-item >
+                          <ion-label color="secondary" position="floating">Email</ion-label>
+                          <ion-input name="email" type="email"></ion-input>
+                      </ion-item>
+                      <ion-item >
+                        <ion-label color="secondary" position="floating">Phone</ion-label>
+                        <ion-input name="phone" type="number"></ion-input>
+                    </ion-item>
+                    <ion-item lines="none" class="top-margin">
+                      <ion-label color="secondary" position="stacked">Description</ion-label>
+                      <ion-textarea clearOnEdit="true" class="text-area" rows="6" cols="20" placeholder="Tell us more about your issue or any suggestion..."></ion-textarea>
+                    </ion-item>
+                      <ion-row>
+                        <ion-col class="ion-padding top-margin">
+                            <ion-button type="submit" color="secondary" expand="full">Submit</ion-button>
+                        </ion-col>
+                    </ion-row>
+   
+                  </ion-list>
+              </ion-col>
+          </ion-row>
+
+      </form>
+
+  </ion-grid>
 </ion-content>
