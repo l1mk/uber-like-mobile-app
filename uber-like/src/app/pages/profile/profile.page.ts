@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ViewChild } from '@angular/core';
-import {IonSlides} from '@ionic/angular';
+import {IonSlides, AlertController} from '@ionic/angular';
 
 @Component({
   selector: 'app-profile',
@@ -9,7 +9,7 @@ import {IonSlides} from '@ionic/angular';
 })
 export class ProfilePage implements OnInit {
   @ViewChild(IonSlides) slides: IonSlides;
-  constructor() { }
+  constructor(public alertController: AlertController) { }
 
   avatars = [
     {
@@ -54,4 +54,22 @@ export class ProfilePage implements OnInit {
   prev() {
     this.slides.slidePrev();
   }
+
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      cssClass: 'my-custom-class',
+      header: 'Info was Saved',
+      buttons: [
+        {
+          text: 'Confirm',
+          handler: () => {
+            console.log('Confirm Ok');
+            this.save()
+          }
+        }
+      ]
+    });
+    await alert.present();
+  }
+
 }

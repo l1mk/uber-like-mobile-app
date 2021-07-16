@@ -53,7 +53,7 @@ export class AccountPage implements OnInit {
       header: 'New Password',
       inputs: [
         {
-          name: 'name8',
+          name: 'name',
           type: 'password',
           placeholder: 'Advanced Attributes',
           cssClass: 'specialClass',
