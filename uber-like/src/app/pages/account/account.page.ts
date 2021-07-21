@@ -53,9 +53,9 @@ export class AccountPage implements OnInit {
       header: 'New Password',
       inputs: [
         {
-          name: 'name',
+          name: 'password',
           type: 'password',
-          placeholder: 'Advanced Attributes',
+          placeholder: 'Type New Password',
           cssClass: 'specialClass',
           attributes: {
             maxlength: 4,

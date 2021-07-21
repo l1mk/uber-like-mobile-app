@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ViewChild } from '@angular/core';
-import {IonSlides} from '@ionic/angular';
+import {IonSlides, AlertController} from '@ionic/angular';
 
 @Component({
   selector: 'app-routes-vehicles',
@@ -9,7 +9,7 @@ import {IonSlides} from '@ionic/angular';
 })
 export class RoutesVehiclesPage implements OnInit {
   @ViewChild(IonSlides) slides: IonSlides;
-  constructor() { }
+  constructor(public alertController: AlertController) { }
 
   vehicles = [
     {
@@ -51,6 +51,31 @@ export class RoutesVehiclesPage implements OnInit {
 
   prev() {
     this.slides.slidePrev();
+  }
+
+  async presentAlertConfirm() {
+    const alert = await this.alertController.create({
+      cssClass: 'my-custom-class',
+      header: 'Are you sure?',
+      message: 'Confirm Vehicle Selection',
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          cssClass: 'secondary',
+          handler: (blah) => {
+            console.log('Confirm Cancel: blah');
+          }
+        }, {
+          text: 'Confirm',
+          handler: () => {
+            console.log('Confirm Okay');
+          }
+        }
+      ]
+    });
+
+    await alert.present();
   }
 
 }
