@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { ViewChild } from '@angular/core';
 import {IonSlides} from '@ionic/angular';
 import { NavController } from '@ionic/angular';
@@ -34,7 +35,8 @@ export class RegisterPage implements OnInit {
   ngOnInit() {
   }
 
-  register() {
+  register(fRegister: NgForm) {
+    console.log("valid", fRegister);
     this.ionLoader.autoLoader();
     this.navCtrl.navigateRoot('/main/tabs/tab2', {animated: true});
   }

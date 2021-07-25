@@ -31,7 +31,7 @@ export class SavedPage implements OnInit {
     console.log("saved");
   }
 
-  async presentAlert() {
+  async presentAlert(form: NgForm) {
     const alert = await this.alertController.create({
       cssClass: 'my-custom-class',
       header: 'New favorite added',
@@ -39,7 +39,7 @@ export class SavedPage implements OnInit {
         {
           text: 'Confirm',
           handler: () => {
-            console.log('Confirm Ok');
+            console.log('Confirm Ok', form);
             this.addFavorite()
           }
         }

@@ -18,11 +18,11 @@ export class ContactFormPage implements OnInit {
     console.log("form sent");
   }
 
-  async presentAlert() {
+  async presentAlert(form: NgForm) {
     const alert = await this.alertController.create({
       cssClass: 'my-custom-class',
       header: 'Thanks for your feedback',
-      subHeader: 'Someone will contact you shortly',
+      subHeader: `Someone will contact you shortly ${form.value.name}`,
       buttons: [
         {
           text: 'Ok',

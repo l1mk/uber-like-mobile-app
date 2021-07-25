@@ -36,32 +36,36 @@
         </ion-col>
       </ion-row>
 
-      <form (ngSubmit)="register()">
+      <form (ngSubmit)="register(fRegister)" #fRegister="ngForm">
         <ion-row>
           <ion-col>
             <ion-list>
               <ion-item>
                 <ion-label color="secondary" position="floating">Name</ion-label>
-                <ion-input name="email" type="email" required></ion-input>
+                <ion-input name="name" type="text" required minlength="2" ngModel></ion-input>
               </ion-item>
               <ion-item>
                 <ion-label color="secondary" position="floating">Email</ion-label>
-                <ion-input name="name" type="text" required></ion-input>
+                <ion-input name="email" type="email" required pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$" ngModel></ion-input>
+              </ion-item>
+              <ion-item> 
+                <ion-label color="secondary" position="floating">Phone</ion-label>
+                <ion-input name="phone" type="tel" maxlength="10" inputmode="numeric" required pattern="^[0-9]*$" ngModel></ion-input>
               </ion-item>
               <ion-item>
                 <ion-label color="secondary" position="floating">Password</ion-label>
-                <ion-input name="password" type="password" required></ion-input>
+                <ion-input name="password" type="password" required minlength="4" ngModel></ion-input>
               </ion-item>
               <ion-item class="bottom-margin">
                 <ion-label color="secondary" position="floating">Confirm Password</ion-label>
-                <ion-input name="password" type="password" required></ion-input>
+                <ion-input name="password" type="password" required minlength="4" ngModel></ion-input>
               </ion-item>
             </ion-list>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col>
-            <ion-button type="submit" color="secondary" expand="full">Create User</ion-button>
+            <ion-button type="submit" color="secondary" expand="full" [disabled]="!fRegister.valid">Create User</ion-button>
           </ion-col>
         </ion-row>
       </form>

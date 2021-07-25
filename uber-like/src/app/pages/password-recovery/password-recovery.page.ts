@@ -22,7 +22,7 @@ export class PasswordRecoveryPage implements OnInit {
     console.log('recovery email sent')
   }
 
-  async presentAlert() {
+  async presentAlert(form: NgForm) {
     const alert = await this.alertController.create({
       cssClass: 'my-custom-class',
       header: 'Please look at your email for further instructions',
@@ -30,7 +30,7 @@ export class PasswordRecoveryPage implements OnInit {
         {
           text: 'Ok',
           handler: () => {
-            console.log('Confirm Ok');
+            console.log('Confirm Ok', form);
             this.recovery()
           }
         }

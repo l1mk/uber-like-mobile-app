@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ViewChild } from '@angular/core';
 import {IonSlides, AlertController} from '@ionic/angular';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-profile',
@@ -55,7 +56,7 @@ export class ProfilePage implements OnInit {
     this.slides.slidePrev();
   }
 
-  async presentAlert() {
+  async presentAlert(form: NgForm) {
     const alert = await this.alertController.create({
       cssClass: 'my-custom-class',
       header: 'Info was Saved',
@@ -63,7 +64,7 @@ export class ProfilePage implements OnInit {
         {
           text: 'Confirm',
           handler: () => {
-            console.log('Confirm Ok');
+            console.log('Confirm Ok', form);
             this.save()
           }
         }

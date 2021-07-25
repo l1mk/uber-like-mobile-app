@@ -82,16 +82,16 @@
     <h4>Add New Favorite Location</h4>
   </ion-row>
 
-    <form (ngSubmit)="presentAlert()" class="form">
+    <form (ngSubmit)="presentAlert(fSave)" #fSave="ngForm" class="form">
       <ion-row>
           <ion-col>
                 <ion-item >
                   <ion-label color="secondary" position="floating">Name</ion-label>
-                  <ion-input name="name" type="text"></ion-input>
+                  <ion-input name="name" type="text" required ngModel></ion-input>
                 </ion-item>
                 <ion-item >
                   <ion-label color="secondary" position="floating">Address</ion-label>
-                  <ion-input name="address" type="text"></ion-input>
+                  <ion-input name="address" type="text" required minlength="5" ngModel></ion-input>
                 </ion-item>
                 <ion-item>
                   <ion-label>Category</ion-label>
@@ -103,7 +103,7 @@
                 </ion-item>
                 <ion-row>
                   <ion-col class="ion-padding">
-                      <ion-button type="submit" color="secondary" expand="full">Add Favorite</ion-button>
+                      <ion-button type="submit" color="secondary" expand="full" [disabled]="!fSave.valid">Add Favorite</ion-button>
                   </ion-col>
                 </ion-row>
           </ion-col>

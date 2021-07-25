@@ -36,22 +36,22 @@
       </ion-row>
 
       
-      <form (ngSubmit)="presentAlert()" class="top-margin ion-padding">
+      <form (ngSubmit)="presentAlert(f)" #f="ngForm" class="top-margin ion-padding">
         <h4 class="center-text">Update Personal Information:</h4>
         <ion-row>
           <ion-col>
             <ion-list>
               <ion-item> 
                 <ion-label color="secondary">Name:</ion-label>
-                <ion-input name="name" placeholder="{{user.name}}" type="text"></ion-input>
+                <ion-input name="name" placeholder="{{user.name}}" type="text" required minlength="2" ngModel></ion-input>
               </ion-item>
               <ion-item>
                 <ion-label color="secondary">Email:</ion-label>
-                <ion-input name="email" placeholder="{{user.email}}" type="email"></ion-input>
+                <ion-input name="email" placeholder="{{user.email}}" type="email" required pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$" ngModel></ion-input>
               </ion-item>
               <ion-item> 
                 <ion-label color="secondary">Phone:</ion-label>
-                <ion-input name="phone" placeholder="{{user.phone}}" type="number"></ion-input>
+                <ion-input name="phone" placeholder="{{user.phone}}" type="tel" maxlength="10" inputmode="numeric" pattern="^[0-9]*$" ngModel></ion-input>
               </ion-item>
               <ion-item class="bottom-margin">
                 <ion-label color="secondary">DBA:</ion-label>
@@ -72,7 +72,7 @@
         </ion-row>
         <ion-row>
           <ion-col>
-            <ion-button type="submit" color="primary" expand="full">Save</ion-button>
+            <ion-button type="submit" color="primary" expand="full" [disabled]="!f.valid">Save</ion-button>
           </ion-col>
         </ion-row>
       </form>
