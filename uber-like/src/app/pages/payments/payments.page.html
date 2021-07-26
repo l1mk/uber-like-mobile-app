@@ -2,7 +2,7 @@
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-buttons>
-        <ion-back-button defaultHref="/main/tabs/tab2" text="" mode="ios"></ion-back-button>
+        <ion-back-button defaultHref="/main/tabs/tab2" text="" mode="ios" color="secondary"></ion-back-button>
       </ion-buttons>
     </ion-buttons>
   </ion-toolbar>
@@ -19,7 +19,7 @@
             <ion-card class="ion-padding title-card"> 
                 
               <ion-card-header>
-                    <img class="avatar-icon" src="/assets/avatars/payment_active_avatar.svg">
+                    <img class="avatar-icon" src="/assets/avatars/payment_dollar_avatar.svg">
               </ion-card-header>
               <ion-card-content>
                   <ion-label color="secondary">Your Payment Methods</ion-label>
@@ -50,7 +50,7 @@
             </ion-item>
               
             <h3>Add Payment Methods</h3>
-            <ion-item detail lines="none" class="item-card bottom-card">
+            <ion-item detail lines="none" class="item-card bottom-card" routerLink="/credit-card">
               <ion-avatar>
                 <img src="/assets/avatars/visa_avatar.svg">
               </ion-avatar>

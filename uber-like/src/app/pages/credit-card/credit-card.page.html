@@ -1,0 +1,74 @@
+<ion-header class="ion-no-border" transparent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-buttons>
+        <ion-back-button defaultHref="/" text="" mode="ios" color="secondary"></ion-back-button>
+      </ion-buttons>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid fixed class="ion-padding" >
+
+      <ion-row>
+          <ion-col>
+
+              <ion-card class="ion-padding">
+                  <ion-card-header>
+                      <ion-slides>
+                          <ion-slide>
+                              <img class="avatar-icon" src="/assets/avatars/cc_avatar.svg">
+                          </ion-slide>
+                      </ion-slides>
+                  </ion-card-header>
+                  
+                  <ion-card-content class="ion-padding">
+                      <ion-label color="secondary">Add Card</ion-label>
+                  </ion-card-content>
+              </ion-card>
+
+          </ion-col>
+      </ion-row>
+
+      <form (ngSubmit)="presentAlert(f)" #f="ngForm" class="top-margin bottom-margin">
+          <ion-row>
+              <ion-col>
+                  <ion-list>
+                    <ion-item >
+                      <ion-label color="secondary" position="floating">Card Number</ion-label>
+                      <ion-input name="card-number" type="tel" minlength="16" maxlength="16" inputmode="numeric" pattern="^[0-9]*$" required ngModel></ion-input>
+                    </ion-item>
+                    <ion-item >
+                      <ion-label color="secondary">Exp. Date</ion-label>
+                      <ion-input name="date" type="date" ngModel required></ion-input>
+                    </ion-item>
+                    <ion-item >
+                      <ion-label color="secondary" position="floating">CVV</ion-label>
+                      <ion-input name="cvv" type="tel" minlength="3" maxlength="4" inputmode="numeric" pattern="^[0-9]*$" required ngModel></ion-input>
+                    </ion-item>
+                    <ion-item>
+                      <ion-label>Country</ion-label>
+                      <ion-select [(ngModel)] = "countrySelected">
+                        <ion-select-option *ngFor = "let c of countryData" value="{c.id}">{{c.name}}</ion-select-option>
+                      </ion-select>
+                    </ion-item>
+                    <ion-item>
+                      <ion-label color="secondary" position="floating">Zip Code</ion-label>
+                      <ion-input name="zip" type="tel" minlength="3" maxlength="5" inputmode="numeric" pattern="^[0-9]*$" required ngModel></ion-input>
+                    </ion-item>
+                      <ion-row>
+                        <ion-col class="ion-padding top-margin">
+                            <ion-button type="submit" color="secondary" expand="full" [disabled]="!f.valid">Save</ion-button>
+                        </ion-col>
+                    </ion-row>
+   
+                  </ion-list>
+              </ion-col>
+          </ion-row>
+
+      </form>
+
+  </ion-grid>
+</ion-content>

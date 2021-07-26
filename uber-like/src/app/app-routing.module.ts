@@ -78,6 +78,10 @@ const routes: Routes = [
   {
     path: 'contact-form',
     loadChildren: () => import('./pages/help/contact-form/contact-form.module').then( m => m.ContactFormPageModule)
+  },
+  {
+    path: 'credit-card',
+    loadChildren: () => import('./pages/credit-card/credit-card.module').then( m => m.CreditCardPageModule)
   }
 ];
 
