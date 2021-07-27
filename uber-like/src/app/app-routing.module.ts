@@ -82,6 +82,10 @@ const routes: Routes = [
   {
     path: 'credit-card',
     loadChildren: () => import('./pages/credit-card/credit-card.module').then( m => m.CreditCardPageModule)
+  },
+  {
+    path: 'password',
+    loadChildren: () => import('./pages/password/password.module').then( m => m.PasswordPageModule)
   }
 ];
 

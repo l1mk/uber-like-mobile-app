@@ -42,3 +42,7 @@ ion-loading.custom-loading-class {
 .my-custom-class {
   font-size: smaller !important;
 }
+//reduce size on toogle
+ion-toggle {
+  zoom: 0.8;
+}

@@ -46,3 +46,9 @@ ion-toolbar {
 .button:active {
     filter: brightness(50%);
 }
+//items
+.item {
+    display: flex;
+    height: 60px;
+    align-items: center;
+}

@@ -54,11 +54,11 @@
               </ion-item>
               <ion-item>
                 <ion-label color="secondary" position="floating">Password</ion-label>
-                <ion-input name="password" type="password" required minlength="4" ngModel></ion-input>
+                <ion-input name="password" type="password" required minlength="8" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]+$" ngModel></ion-input>
               </ion-item>
               <ion-item class="bottom-margin">
                 <ion-label color="secondary" position="floating">Confirm Password</ion-label>
-                <ion-input name="password" type="password" required minlength="4" ngModel></ion-input>
+                <ion-input name="password" type="password" required minlength="8" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]+$" ngModel></ion-input>
               </ion-item>
             </ion-list>
           </ion-col>

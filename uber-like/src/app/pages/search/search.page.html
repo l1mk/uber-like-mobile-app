@@ -31,7 +31,7 @@
   </ion-row>
 
   <ion-list *ngFor="let favorite of favorites">
-    <ion-item lines="full" routerLink="/routes-vehicles">
+    <ion-item lines="full" routerLink="/routes-vehicles" class="item">
       <ion-avatar slot="start">
         <img src="/assets/icon/{{favorite.img}}">
       </ion-avatar>
@@ -42,7 +42,7 @@
     </ion-item>
   </ion-list>
 
-  <ion-item detail lines="full" routerLink="/saved">
+  <ion-item detail lines="full" routerLink="/saved" class="item"> 
     <ion-avatar slot="start">
       <img src="/assets/icon/star_2_avatar.svg">
     </ion-avatar>
@@ -57,7 +57,7 @@
 
   <ion-list *ngFor="let item of items">
 
-     <ion-item lines="full">
+     <ion-item lines="full" class="item">
         <ion-avatar slot="start">
           <img src="/assets/icon/clock_avatar.svg">
         </ion-avatar>

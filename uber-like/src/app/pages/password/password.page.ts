@@ -2,13 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { AlertController } from '@ionic/angular';
 
-
 @Component({
-  selector: 'app-password-recovery',
-  templateUrl: './password-recovery.page.html',
-  styleUrls: ['./password-recovery.page.scss'],
+  selector: 'app-password',
+  templateUrl: './password.page.html',
+  styleUrls: ['./password.page.scss'],
 })
-export class PasswordRecoveryPage implements OnInit {
+export class PasswordPage implements OnInit {
 
   constructor(
     public alertController: AlertController
@@ -37,5 +36,6 @@ export class PasswordRecoveryPage implements OnInit {
     });
     await alert.present();
   }
+
 
 }

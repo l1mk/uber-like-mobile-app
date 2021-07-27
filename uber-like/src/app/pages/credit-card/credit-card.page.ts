@@ -14,9 +14,6 @@ countrySelected: any;
 
   constructor(public alertController: AlertController) { }
 
-
-
-
   ngOnInit() {
 
     this.countryData = [
@@ -977,13 +974,12 @@ countrySelected: any;
         "name": "Zimbabwe"
       }
     ]
-    
+
   }
 
   submit(){
     console.log("form sent");
   }
-
 
   async presentAlert(form: NgForm) {
     const alert = await this.alertController.create({
