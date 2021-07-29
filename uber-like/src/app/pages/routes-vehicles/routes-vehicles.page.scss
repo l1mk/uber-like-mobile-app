@@ -45,6 +45,15 @@ ion-button {
 .smaller-text {
     font-size: 0.6rem;
 }
+//active text
+.active-text {
+    font-size: 0.8rem;
+    color: #000;
+}
+//margin 
+.margin-bottom {
+    margin-bottom: 5%;
+}
 //title decoration
 h4{
     color: #3B546A;
@@ -55,11 +64,31 @@ p {
 }
 //prev decoration
 .btnPrev {
+    position: absolute;
+    left: 10px;
+    top: 50%;
     background-color: #fff;
     color: #3B546A;
 }
 //next decoration
 .btnNext {
+    position: absolute;
+    right: 10px;
+    top: 50%;
     background-color: #fff;
     color: #3B546A;
+}
+//avatar original css
+.pick-avatar {
+  opacity: 0.5;
+  width: 70%;
+  font-size: 0.6rem;
+  color: #3B546A;
+}
+//avatar animations original css
+.pick-avatar-selected {
+  transition: opacity 0.2s linear;
+  opacity: 1 !important;
+  width: 80% !important;
+  font-size: 0.6rem;
 }

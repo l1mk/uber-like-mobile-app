@@ -11,30 +11,38 @@ export class RoutesVehiclesPage implements OnInit {
   @ViewChild(IonSlides) slides: IonSlides;
   constructor(public alertController: AlertController) { }
 
+  vehicleSelected =     {
+    img: 'bike_avatar.svg',
+    selected: false,
+    name: 'Bicycle',
+    price: 'Aprox. $25',
+    estimate: 'ETA 2:42pm'
+  }
+
   vehicles = [
     {
-      img: 'bike-avatar-wide.svg',
-      selected: false,
+      img: 'bike_avatar.svg',
+      selected: true,
       name: 'Bicycle',
       price: 'Aprox. $25',
       estimate: 'ETA 2:42pm'
     },
     {
-      img: 'scooter-avatar-wide.svg',
+      img: 'scooter_avatar.svg',
       selected: false,
       name: 'Scooter',
       price: 'Aprox. $5',
       estimate: 'ETA 2:50pm'
     },
     {
-      img: 'taxi-avatar-wide.svg',
-      selected: true,
+      img: 'taxi_avatar.svg',
+      selected: false,
       name: 'Taxi',
       price: 'Aprox. $100',
       estimate: 'ETA 1:40pm'
     },
     {
-      img: 'limo-avatar-wide.svg',
+      img: 'limo_avatar.svg',
       selected: false,
       name: 'Limousine',
       price: 'Aprox. $120',
@@ -45,6 +53,12 @@ export class RoutesVehiclesPage implements OnInit {
   ngOnInit() {
   }
 
+  opts = {
+    slidesPerView: 3,
+    spaceBetween: 10,
+    freeMode: true
+  };
+
   next() {
     this.slides.slideNext();
   }
@@ -53,11 +67,22 @@ export class RoutesVehiclesPage implements OnInit {
     this.slides.slidePrev();
   }
 
+  clickEvent(vehicle: any){
+    this.vehicles.map(function(obj){
+      console.log(obj.selected)
+      if (obj.selected === true ){
+        obj.selected = false
+      } 
+    })
+    vehicle.selected = true;
+    this.vehicleSelected = vehicle;
+  }
+
   async presentAlertConfirm() {
     const alert = await this.alertController.create({
       cssClass: 'my-custom-class',
       header: 'Are you sure?',
-      message: 'Confirm Vehicle Selection',
+      message: `Confirm Vehicle Selection ${this.vehicleSelected.name}`,
       buttons: [
         {
           text: 'Cancel',
