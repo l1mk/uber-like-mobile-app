@@ -28,7 +28,7 @@
             </ion-card>
 
             <h3>Availables</h3>
-            <ion-item lines="none" class="item-card {{payment.selected  ? 'selected' : ''}} button" *ngFor="let payment of payments" (click)="select()">
+            <ion-item lines="none" class="item-card {{payment.selected  ? 'selected' : ''}} button" *ngFor="let payment of payments" (click)="select(payment)">
               <ion-row class="row-width">
 
                 <ion-col size="2" class="center">

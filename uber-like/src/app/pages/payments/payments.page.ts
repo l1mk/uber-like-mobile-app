@@ -9,6 +9,14 @@ export class PaymentsPage implements OnInit {
 
   constructor() { }
 
+  paymentSelected = {
+    img: 'visa_avatar.svg',
+    selected: true,
+    number: '1316******7755',
+    name: 'John Smith',
+    type: 'débito'
+  }
+  
   payments = [
     {
       img: 'visa_avatar.svg',
@@ -36,9 +44,14 @@ export class PaymentsPage implements OnInit {
   ngOnInit() {
   }
 
-  select(){
-    //code to change "selected" on the card
-    console.log('click')
+  select(payment: any){
+    this.payments.map(function(obj){
+      if (obj.selected === true ){
+        obj.selected = false;
+      } 
+    })
+    payment.selected = true;
+    this.paymentSelected = payment;
   }
 
 }
