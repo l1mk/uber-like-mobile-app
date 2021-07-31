@@ -17,6 +17,8 @@ export class RegisterPage implements OnInit {
     private ionLoader: LoaderService
     ) { }
 
+  showPasswordA = false;
+  showPasswordB = false;
   avatars = [
     {
       img: '1_avatar.svg',
@@ -48,5 +50,13 @@ export class RegisterPage implements OnInit {
   prev() {
     this.slides.slidePrev();
   }
+
+    togglePasswordA(){
+      this.showPasswordA = !this.showPasswordA;
+    }
+
+    togglePasswordB(){
+      this.showPasswordB = !this.showPasswordB;
+    }
 
 }

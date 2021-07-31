@@ -10,6 +10,8 @@ import { LoaderService } from './../../services/loader.service';
 })
 export class LoginPage implements OnInit {
 
+  showPassword = false;
+
   constructor(
     private navCtrl: NavController,
     private ionLoader: LoaderService
@@ -22,5 +24,10 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
   }
+
+  togglePassword(){
+    this.showPassword = !this.showPassword;
+  }
+
 
 }

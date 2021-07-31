@@ -42,8 +42,8 @@
                       </ion-item>
                       <ion-item>
                           <ion-label color="secondary" position="floating">Password</ion-label>
-                          <ion-input name="password" type="password" required minlength="4" ngModel></ion-input>
-                          <ion-toggle slot="end"></ion-toggle>
+                          <ion-input name="password" [type]="showPassword ? 'text' : 'password'" required minlength="4" ngModel></ion-input>
+                          <ion-toggle slot="end" (click)="togglePassword()"></ion-toggle>
                       </ion-item>
                       <ion-row>
                           <ion-col class="password-recovery-title bottom-margin">
