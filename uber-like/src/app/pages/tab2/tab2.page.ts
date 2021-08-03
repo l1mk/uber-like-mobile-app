@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertController } from '@ionic/angular';
+import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 
 @Component({
   selector: 'app-tab2',
@@ -7,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Tab2Page implements OnInit {
 
-  constructor() { }
+  constructor(private alertController: AlertController,
+              private socialSharing: SocialSharing
+              ){ }
 
   lastTrip = {
     date: "08-02-2021 05-34 p.m.",
@@ -29,6 +33,36 @@ export class Tab2Page implements OnInit {
       img: "work_avatar.svg"
     }
   ]
+
+  menu(){
+    console.log("menu share only on mobile");
+    this.socialSharing.share();
+  }
+
+  async presentAlertConfirm() {
+    const alert = await this.alertController.create({
+      cssClass: 'my-custom-class',
+      header: 'Are you sure?',
+      message: 'Confirm to erase this address',
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          cssClass: 'secondary',
+          handler: () => {
+            console.log('Confirm Cancel: blah');
+          }
+        }, {
+          text: 'Confirm',
+          handler: () => {
+            console.log('Confirm Okay');
+          }
+        }
+      ]
+    });
+
+    await alert.present();
+  }
 
   ngOnInit() {
   }

@@ -37,20 +37,16 @@
                               </ion-item>
                           
                               <ion-item-options side="start">
-                              
-                                  <ion-item-option color="tertiary">
-                                      <ion-icon class="button" slot="icon-only" name="heart" color="primary"></ion-icon>
-                                  </ion-item-option>
-                                  <ion-item-option color="tertiary">
-                                      <ion-icon class="button" slot="icon-only" name="share" color="secondary"></ion-icon>
-                                  </ion-item-option>
+                                <ion-item-option color="tertiary">
+                                    <ion-icon class="button" slot="icon-only" name="share" color="secondary" (click)="menu()"></ion-icon>
+                                </ion-item-option>
+                                
                               </ion-item-options>
-                          
                               <ion-item-options side="end">
-                                  <ion-item-option color="tertiary">
-                                      <ion-icon class="button" slot="icon-only" name="trash" color="danger"></ion-icon>
-                                  </ion-item-option>
-                              </ion-item-options>
+                                <ion-item-option color="tertiary">
+                                    <ion-icon class="button" slot="icon-only" name="trash" color="danger" (click)="presentAlertConfirm()"></ion-icon>
+                                </ion-item-option>
+                            </ion-item-options>
                           </ion-item-sliding>
                       
                       </ion-list>

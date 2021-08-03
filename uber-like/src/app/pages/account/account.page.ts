@@ -10,14 +10,15 @@ export class AccountPage implements OnInit {
 
   constructor(public alertController: AlertController) { }
 
-
-  user = {
-    name: 'John Smith',
-    email: 'jm@gmail,com',
-    phone: '(123)456789',
-    birthdate: '04/02/1986',
-    genre: 'male',
-  };
+  user = 
+    {
+      name: 'John Smith',
+      email: 'jm@gmail,com',
+      phone: '(123)456789',
+      birthdate: '04/02/1986',
+      genre: 'male',
+      img: '3_avatar.svg',
+    };
 
   lastTrip = {
     date: "08-02-2021 05-34 p.m.",
@@ -47,40 +48,40 @@ export class AccountPage implements OnInit {
     console.log("borrar cuenta")
   }
 
-  async presentAlertPrompt() {
-    const alert = await this.alertController.create({
-      cssClass: 'my-custom-class',
-      header: 'New Password',
-      inputs: [
-        {
-          name: 'password',
-          type: 'password',
-          placeholder: 'Type New Password',
-          cssClass: 'specialClass',
-          attributes: {
-            maxlength: 4,
-            inputmode: 'decimal'
-          }
-        }
-      ],
-      buttons: [
-        {
-          text: 'Cancel',
-          role: 'cancel',
-          cssClass: 'secondary',
-          handler: () => {
-            console.log('Confirm Cancel');
-          }
-        }, {
-          text: 'Ok',
-          handler: () => {
-            console.log('Confirm Ok');
-          }
-        }
-      ]
-    });
-    await alert.present();
-  }
+  // async presentAlertPrompt() {
+  //   const alert = await this.alertController.create({
+  //     cssClass: 'my-custom-class',
+  //     header: 'New Password',
+  //     inputs: [
+  //       {
+  //         name: 'password',
+  //         type: 'password',
+  //         placeholder: 'Type New Password',
+  //         cssClass: 'specialClass',
+  //         attributes: {
+  //           maxlength: 4,
+  //           inputmode: 'decimal'
+  //         }
+  //       }
+  //     ],
+  //     buttons: [
+  //       {
+  //         text: 'Cancel',
+  //         role: 'cancel',
+  //         cssClass: 'secondary',
+  //         handler: () => {
+  //           console.log('Confirm Cancel');
+  //         }
+  //       }, {
+  //         text: 'Ok',
+  //         handler: () => {
+  //           console.log('Confirm Ok');
+  //         }
+  //       }
+  //     ]
+  //   });
+  //   await alert.present();
+  // }
 
   async presentAlertConfirm() {
     const alert = await this.alertController.create({
@@ -92,7 +93,7 @@ export class AccountPage implements OnInit {
           text: 'Cancel',
           role: 'cancel',
           cssClass: 'secondary',
-          handler: (blah) => {
+          handler: () => {
             console.log('Confirm Cancel: blah');
           }
         }, {

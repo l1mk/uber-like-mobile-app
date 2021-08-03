@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import {AlertController} from '@ionic/angular';
+import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 
 @Component({
   selector: 'app-saved',
@@ -22,13 +23,20 @@ export class SavedPage implements OnInit {
     }
   ]
 
-  constructor(public alertController: AlertController) { }
+  constructor(public alertController: AlertController,
+              private socialSharing: SocialSharing
+              ) { }
 
   ngOnInit() {
   }
 
   addFavorite() {
     console.log("saved");
+  }
+
+  menu(){
+    console.log("menu share only on mobile");
+    this.socialSharing.share();
   }
 
   async presentAlert(form: NgForm) {
@@ -45,6 +53,31 @@ export class SavedPage implements OnInit {
         }
       ]
     });
+    await alert.present();
+  }
+
+  async presentAlertConfirm() {
+    const alert = await this.alertController.create({
+      cssClass: 'my-custom-class',
+      header: 'Are you sure?',
+      message: 'Confirm to erase this address',
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          cssClass: 'secondary',
+          handler: () => {
+            console.log('Confirm Cancel: blah');
+          }
+        }, {
+          text: 'Confirm',
+          handler: () => {
+            console.log('Confirm Okay');
+          }
+        }
+      ]
+    });
+
     await alert.present();
   }
 

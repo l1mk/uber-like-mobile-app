@@ -35,6 +35,7 @@ export class ProfilePage implements OnInit {
       phone: '(123)456789',
       birthdate: '04/02/1986',
       genre: 'male',
+      img: '3_avatar.svg',
     };
   
   

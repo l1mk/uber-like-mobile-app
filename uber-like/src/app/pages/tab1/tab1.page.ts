@@ -7,13 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Tab1Page implements OnInit {
 
-  user = {
-    name: 'John Smith',
-    email: 'jm@gmail,com',
-    phone: '(123)456789',
-    birthdate: '04/02/1986',
-    genre: 'male',
-  };
+  user = 
+    {
+      name: 'John Smith',
+      email: 'jm@gmail,com',
+      phone: '(123)456789',
+      birthdate: '04/02/1986',
+      genre: 'male',
+      img: '3_avatar.svg',
+    };
 
   constructor() { }
 
