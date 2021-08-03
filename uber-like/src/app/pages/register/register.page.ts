@@ -16,7 +16,8 @@ export class RegisterPage implements OnInit {
     private navCtrl: NavController,
     private ionLoader: LoaderService
     ) { }
-
+  
+  date: Date = new Date();
   showPasswordA = false;
   showPasswordB = false;
   avatars = [
@@ -35,6 +36,10 @@ export class RegisterPage implements OnInit {
   ];
   
   ngOnInit() {
+  }
+
+  dateChange(event){
+    console.log(new Date (event.detail.value))
   }
 
   register(fRegister: NgForm) {

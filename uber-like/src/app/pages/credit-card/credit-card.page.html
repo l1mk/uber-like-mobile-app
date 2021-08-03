@@ -41,22 +41,22 @@
                       <ion-input name="card-number" type="tel" minlength="16" maxlength="16" inputmode="numeric" pattern="^[0-9]*$" required ngModel></ion-input>
                     </ion-item>
                     <ion-item >
-                      <ion-label color="secondary">Exp. Date</ion-label>
-                      <ion-input name="date" type="date" ngModel required></ion-input>
-                    </ion-item>
-                    <ion-item >
                       <ion-label color="secondary" position="floating">CVV</ion-label>
                       <ion-input name="cvv" type="tel" minlength="3" maxlength="4" inputmode="numeric" pattern="^[0-9]*$" required ngModel></ion-input>
                     </ion-item>
                     <ion-item>
-                      <ion-label>Country</ion-label>
+                      <ion-label color="secondary" position="floating">Zip Code</ion-label>
+                      <ion-input name="zip" type="tel" minlength="3" maxlength="5" inputmode="numeric" pattern="^[0-9]*$" required ngModel></ion-input>
+                    </ion-item>
+                    <ion-item class="top-margin">
+                      <ion-label  color="secondary">Exp. Date</ion-label>
+                      <ion-datetime displayFormat="MM DD YYYY" [value]="date.toISOString()" [min]="date.toISOString()" max="2030-12-31" (ionChange)="dateChange($event)"></ion-datetime>
+                    </ion-item>
+                    <ion-item class="top-margin">
+                      <ion-label color="secondary">Country</ion-label>
                       <ion-select [(ngModel)] = "countrySelected">
                         <ion-select-option *ngFor = "let c of countryData" value="{c.id}">{{c.name}}</ion-select-option>
                       </ion-select>
-                    </ion-item>
-                    <ion-item>
-                      <ion-label color="secondary" position="floating">Zip Code</ion-label>
-                      <ion-input name="zip" type="tel" minlength="3" maxlength="5" inputmode="numeric" pattern="^[0-9]*$" required ngModel></ion-input>
                     </ion-item>
                       <ion-row>
                         <ion-col class="ion-padding top-margin">

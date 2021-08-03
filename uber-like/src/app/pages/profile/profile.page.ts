@@ -12,6 +12,7 @@ export class ProfilePage implements OnInit {
   @ViewChild(IonSlides) slides: IonSlides;
   constructor(public alertController: AlertController) { }
 
+  date: Date = new Date();
   avatars = [
     {
       img: '1_avatar.svg',
@@ -54,6 +55,10 @@ export class ProfilePage implements OnInit {
 
   prev() {
     this.slides.slidePrev();
+  }
+
+  dateChange(event){
+    console.log(new Date (event.detail.value))
   }
 
   async presentAlert(form: NgForm) {

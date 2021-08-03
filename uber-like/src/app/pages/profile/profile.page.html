@@ -55,7 +55,7 @@
               </ion-item>
               <ion-item class="bottom-margin">
                 <ion-label color="secondary">DBA:</ion-label>
-                <ion-input name="birthdate" placeholder="{{user.birthdate}}" type="text"></ion-input>
+                <ion-datetime name="birthdate" displayFormat="MM DD YYYY" value="{{user.birthdate}}" [max]="date.toISOString()" (ionChange)="dateChange($event)"></ion-datetime>
               </ion-item>
               <ion-item lines="none">
                 <ion-segment (ionChange)="segmentChanged($event)" value="{{user.genre}}">

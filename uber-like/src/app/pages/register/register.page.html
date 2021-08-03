@@ -52,6 +52,10 @@
                 <ion-label color="secondary" position="floating">Phone</ion-label>
                 <ion-input name="phone" type="tel" maxlength="10" inputmode="numeric" required pattern="^[0-9]*$" ngModel></ion-input>
               </ion-item>
+              <ion-item class="top-margin">
+                <ion-label color="secondary">DBA:</ion-label>
+                <ion-datetime name="birthdate" displayFormat="MM DD YYYY" [value]="date.toISOString()" [max]="date.toISOString()" (ionChange)="dateChange($event)"></ion-datetime>
+              </ion-item>
               <ion-item>
                 <ion-label color="secondary" position="floating">Password</ion-label>
                 <ion-input name="password" [type]="showPasswordA ? 'text' : 'password'" required minlength="8" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]+$" ngModel></ion-input>

@@ -11,6 +11,7 @@ export class CreditCardPage implements OnInit {
 countryData : any[];
 country : any;
 countrySelected: any;
+date: Date = new Date();
 
   constructor(public alertController: AlertController) { }
 
@@ -979,6 +980,10 @@ countrySelected: any;
 
   submit(){
     console.log("form sent");
+  }
+
+  dateChange(event){
+    console.log(new Date (event.detail.value))
   }
 
   async presentAlert(form: NgForm) {
