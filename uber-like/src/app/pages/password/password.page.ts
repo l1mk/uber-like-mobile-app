@@ -9,8 +9,7 @@ import { AlertController } from '@ionic/angular';
 })
 export class PasswordPage implements OnInit {
 
-  showPasswordA = false;
-  showPasswordB = false;
+  showPassword = false;
 
   constructor(
     public alertController: AlertController
@@ -40,12 +39,8 @@ export class PasswordPage implements OnInit {
     await alert.present();
   }
 
-  togglePasswordA(){
-    this.showPasswordA = !this.showPasswordA;
-  }
-
-  togglePasswordB(){
-    this.showPasswordB = !this.showPasswordB;
+  togglePassword(){
+    this.showPassword = !this.showPassword;
   }
 
 }

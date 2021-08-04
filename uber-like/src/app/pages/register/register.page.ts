@@ -18,8 +18,7 @@ export class RegisterPage implements OnInit {
     ) { }
   
   date: Date = new Date();
-  showPasswordA = false;
-  showPasswordB = false;
+  showPassword = false;
   avatars = [
     {
       img: '1_avatar.svg',
@@ -56,12 +55,9 @@ export class RegisterPage implements OnInit {
     this.slides.slidePrev();
   }
 
-    togglePasswordA(){
-      this.showPasswordA = !this.showPasswordA;
-    }
+  togglePassword(){
+    this.showPassword = !this.showPassword;
+  }
 
-    togglePasswordB(){
-      this.showPasswordB = !this.showPasswordB;
-    }
 
 }

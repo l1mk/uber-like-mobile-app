@@ -1,64 +1,75 @@
 //ion background css
 ion-content {
-    position: absolute;
-    top: 0px;
-  }
-  //ion background css
-  ion-toolbar {
-    --background: transparent;
-  }
-  //ion card size
-  ion-card {
-    display: flex;
-    position: relative;
-    margin: auto;
-    margin-top: 10vmax;
-    height: 8rem;
-    width: 14rem;
-    overflow: unset !important;
-  }
-  //ion content css
-  ion-card-header {
-    position: absolute;
-    width: 14rem;
-    text-align: center;
-    left: 0;
-    top: -35%
-  }
-  //ion content css
-  ion-card-content {
-    position: absolute;
-    width: 14rem;
-    text-align: center;
-    left: 0;
-    top: 50%;
-  }
-  //ion item line color
-  ion-item {
-    --border-color: #3B546A;
-  }
-  //avatar img css
-  .avatar-icon {
-    width: 8vmax;
-    z-index: 1;
-  }
-  //bottom margin to push button
-  .bottom-margin {
-    margin-bottom: 5%;
-  }
-  //top margin for date input
-  .top-margin {
-    margin-top: 5%;
-  }
-  //prev decoration
-  .btnPrev {
-      margin-top: 20%;
-      background-color: #fff;
-      color: #3B546A;
-  }
-  //next decoration
-  .btnNext {
-      margin-top: 20%;
-      background-color: #fff;
-      color: #3B546A;
-  }
+  position: absolute;
+  top: 0px;
+}
+//ion background css
+ion-toolbar {
+  --background: transparent;
+}
+//ion card size
+ion-card {
+  display: flex;
+  position: relative;
+  margin: auto;
+  margin-top: 10vmax;
+  height: 8rem;
+  width: 14rem;
+  overflow: unset !important;
+}
+//ion content css
+ion-card-header {
+  position: absolute;
+  width: 14rem;
+  text-align: center;
+  left: 0;
+  top: -35%
+}
+//ion content css
+ion-card-content {
+  position: absolute;
+  width: 14rem;
+  text-align: center;
+  left: 0;
+  top: 50%;
+}
+//ion item line color
+ion-item {
+  --border-color: #3B546A;
+}
+//avatar img css
+.avatar-icon {
+  width: 8vmax;
+  z-index: 1;
+}
+//bottom margin to push button
+.bottom-margin {
+  margin-bottom: 5%;
+}
+//top margin for date input
+.top-margin {
+  margin-top: 5%;
+}
+//prev decoration
+.btnPrev {
+    margin-top: 20%;
+    background-color: #fff;
+    color: #3B546A;
+}
+//next decoration
+.btnNext {
+    margin-top: 20%;
+    background-color: #fff;
+    color: #3B546A;
+}
+//align items right
+.align-right {
+  position: relative;
+  display: flex;
+  font-size: 14px;
+  color: #888888;
+  align-content: flex-end;
+  justify-content: flex-end;
+  margin-top: 1%;
+  text-align: right;
+}

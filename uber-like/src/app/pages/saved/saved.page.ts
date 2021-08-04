@@ -34,8 +34,8 @@ export class SavedPage implements OnInit {
     console.log("saved");
   }
 
-  menu(){
-    console.log("menu share only on mobile");
+  menu(address){
+    console.log(address);
     this.socialSharing.share();
   }
 

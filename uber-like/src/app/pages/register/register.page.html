@@ -58,14 +58,20 @@
               </ion-item>
               <ion-item>
                 <ion-label color="secondary" position="floating">Password</ion-label>
-                <ion-input name="password" [type]="showPasswordA ? 'text' : 'password'" required minlength="8" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]+$" ngModel></ion-input>
-                <ion-toggle slot="end" (click)="togglePasswordA()"></ion-toggle>
+                <ion-input name="password" [type]="showPassword ? 'text' : 'password'" required minlength="8" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]+$" ngModel></ion-input>
               </ion-item>
               <ion-item class="bottom-margin">
                 <ion-label color="secondary" position="floating">Confirm Password</ion-label>
-                <ion-input name="password2" [type]="showPasswordB ? 'text' : 'password'" required minlength="8" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]+$" ngModel></ion-input>
-                <ion-toggle slot="end" (click)="togglePasswordB()"></ion-toggle>
+                <ion-input name="password2" [type]="showPassword ? 'text' : 'password'" required minlength="8" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]+$" ngModel></ion-input>
               </ion-item>
+              <ion-row class="ion-align-items-center align-right">
+                <ion-col size="10">
+                  <ion-label>Show Passwords</ion-label>
+                </ion-col>
+                <ion-col size="2">
+                  <ion-toggle (click)="togglePassword()"></ion-toggle>
+                </ion-col>
+              </ion-row>
             </ion-list>
           </ion-col>
         </ion-row>

@@ -34,8 +34,8 @@ export class Tab2Page implements OnInit {
     }
   ]
 
-  menu(){
-    console.log("menu share only on mobile");
+  menu(address){
+    console.log("menu share only on mobile", address);
     this.socialSharing.share();
   }
 
